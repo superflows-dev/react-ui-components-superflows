@@ -10,22 +10,30 @@
 npm install --save react-ui-components-superflows
 ```
 
+## Dependencies
+
+```bash
+npm install --save react-bootstrap
+npm install --save react-bootstrap-icons
+```
+
 ## Usage
 
 ```jsx
+
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {  AlertError, ButtonNext, InputEmail, VSpace } from 'react-ui-components-superflows'
+import {  AlertError, ButtonNext, InputEmail, VSpace, LogoMast } from 'react-ui-components-superflows'
 
 const App = () => {
   return <>
 
     <VSpace />
-    {/*  Usually errorValue is a state variable. When error is blank, the element gets hidden  */}
-    <AlertError caption={errorValue} />
+    <LogoMast imageUrl="https://**************.png" imageAlt="This is a test image" />
+    <VSpace />
+    <AlertError caption="Error seen" />
     <VSpace />
     <ButtonNext />
-    {/*  A component to insert some basic vertical space  */}
     <VSpace />
     <InputEmail />
 
@@ -34,6 +42,7 @@ const App = () => {
 }
 
 export default App
+
 
 ```
 
