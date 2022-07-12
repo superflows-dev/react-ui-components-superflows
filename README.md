@@ -13,16 +13,28 @@ npm install --save react-ui-components-superflows
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {  AlertError, ButtonNext, InputEmail, VSpace } from 'react-ui-components-superflows'
 
-import MyComponent from 'react-ui-components-superflows'
-import 'react-ui-components-superflows/dist/index.css'
+const App = () => {
+  return <>
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+    <VSpace />
+    {/*  Usually errorValue is a state variable. When error is blank, the element gets hidden  */}
+    <AlertError caption={errorValue} />
+    <VSpace />
+    <ButtonNext />
+    {/*  A component to insert some basic vertical space  */}
+    <VSpace />
+    <InputEmail />
+
+  </>
+  
 }
+
+export default App
+
 ```
 
 ## License
