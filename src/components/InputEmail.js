@@ -16,6 +16,7 @@ const InputEmail = (props) => {
         if(validate(event.target.value)) {
             setBorderColor('border-success')
             if(props.setValue != null) props.setValue(event.target.value);
+            if(event.key == "Enter" && props.onEnterPressed != null) props.onEnterPressed(); 
         } else {
             setBorderColor('border-danger')
             if(props.setValue != null) props.setValue('');
