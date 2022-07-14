@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState, useRef } from "react";
 import { Col, Row, Container } from 'react-bootstrap';
 import { Envelope } from 'react-bootstrap-icons';
@@ -7,6 +7,13 @@ const InputEmail = (props) => {
 
     const [borderColor, setBorderColor] = useState('border-secondary')
     const refInput = useRef(null);
+
+
+    useEffect(() => {
+        if(props.autofocus != null) {
+            if(props.autofocus) onClick();
+        }
+    }, [])
 
     const onClick = () => {
         refInput.current.focus();
