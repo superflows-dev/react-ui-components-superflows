@@ -39,6 +39,8 @@ const App = () => {
 
   return <>
 
+    <InfoBlock caption="Operation Successful"/>
+    <VSpace />
     <AlertSuccess caption="Operation Successful"/>
     <VSpace />
     <LogoMast imageUrl="https://**************.png" imageAlt="This is a test image" />
