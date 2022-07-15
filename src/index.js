@@ -8,5 +8,6 @@ import VSpace from './components/VSpace';
 import LogoMast from './components/LogoMast';
 import InputOtp from './components/InputOtp';
 import ButtonTimer from './components/ButtonTimer';
+import AlertSuccessVanishing from './components/AlertSuccessVanishing';
 
-export {AlertError, ButtonNext, InputEmail, InputOtp, VSpace, LogoMast, ButtonTimer};
+export {AlertError, ButtonNext, InputEmail, InputOtp, VSpace, LogoMast, ButtonTimer, AlertSuccessVanishing};
