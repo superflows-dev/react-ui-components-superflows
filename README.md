@@ -39,7 +39,7 @@ const App = () => {
 
   return <>
 
-    <AlertSuccessVanishing caption="Operation Successful" duration={5} />
+    <AlertSuccess caption="Operation Successful"/>
     <VSpace />
     <LogoMast imageUrl="https://**************.png" imageAlt="This is a test image" />
     <VSpace />
