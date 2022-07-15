@@ -25,7 +25,7 @@ const AlertSuccessVanishing = (props) => {
     return (
 
         <div>
-            {props.caption != '' && timer > 0 && 
+            {props.caption != '' && timer > 0 && duration > 0 && 
                 <div>
                     <VSpace />
                     <Container className="w-100" >
