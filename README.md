@@ -26,6 +26,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {  AlertError, ButtonNext, InputEmail, VSpace, LogoMast } from 'react-ui-components-superflows'
 
 const App = () => {
+  
+  const [email, setEmail] = useState('')
+
+  const onClickSubmit = async ()  => {
+
+  }
+
+  const onClickTimer = async ()  => {
+
+  }
+
   return <>
 
     <VSpace />
@@ -33,9 +44,11 @@ const App = () => {
     <VSpace />
     <AlertError caption="Error seen" />
     <VSpace />
-    <ButtonNext />
+    <ButtonNext caption={"Sign In"} disabled={email.length === 0} onClick={() => {onClickSubmit()}} />
     <VSpace />
-    <InputEmail />
+    <InputEmail setValue={setEmail} autofocus={true} onEnterPressed={() => {onClickSubmit()}}/>
+    <VSpace />
+    <ButtonTimer timer={30} captionBefore="Resend OTP in " captionAfter="Resend OTP"  onClick={() => {onClickTimer()}}/>
 
   </>
   
