@@ -6,5 +6,6 @@ import AlertError from './components/AlertError';
 import InputEmail from './components/InputEmail';
 import VSpace from './components/VSpace';
 import LogoMast from './components/LogoMast';
+import InputOtp from './components/InputOtp';
 
-export {AlertError, ButtonNext, InputEmail, VSpace, LogoMast};
+export {AlertError, ButtonNext, InputEmail, InputOtp, VSpace, LogoMast};
