@@ -10,5 +10,6 @@ import InputOtp from './components/InputOtp';
 import ButtonTimer from './components/ButtonTimer';
 import AlertSuccess from './components/AlertSuccess';
 import InfoBlock from './components/InfoBlock';
+import Footnote from './components/Footnote';
 
-export {AlertError, ButtonNext, InputEmail, InputOtp, VSpace, LogoMast, ButtonTimer, AlertSuccess, InfoBlock};
+export {AlertError, ButtonNext, InputEmail, InputOtp, VSpace, LogoMast, ButtonTimer, AlertSuccess, InfoBlock, Footnote};
