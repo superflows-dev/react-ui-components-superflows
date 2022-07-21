@@ -29,7 +29,7 @@ npm install --save react-bootstrap-icons
 
 ## Available UI Components
 
-All the components are responsive built in.
+All the components are responsive built in. Usage and customization options shown below.
 
 ### AlertError
 
@@ -45,7 +45,11 @@ const App = () => {
 
   return (
     <div>
+      {/* Simple usage */}
       <AlertError caption="Duplications not allowed" />
+
+      {/* Advanced usage */}
+      <AlertError caption="Duplications not allowed" custom={{backgroundColor:"#F4CFCA", color:"#000000", borderColor:"#000000"}}/>
     </div>
   )
 
@@ -70,7 +74,11 @@ const App = () => {
 
   return (
     <div>
+      {/* Simple usage */}
       <AlertSuccess caption="Operation successful!" />
+
+      {/* Advanced usage */}
+      <AlertSuccess caption="Duplications not allowed" custom={{backgroundColor:"#D7ECDE", color:"#99A89E", borderColor:"#99A89E"}}/>
     </div>
   )
 
@@ -101,10 +109,18 @@ const App = () => {
 
   return (
     <div>
-        <ButtonNext 
-          caption="Verify" 
-          disabled={otp.length === 0} 
-          onClick={onClick} />
+      {/* Simple usage */}
+      <ButtonNext 
+        caption="Verify" 
+        disabled={otp.length === 0} 
+        onClick={onClick} />
+
+      {/* Advanced usage */}
+      <ButtonNext 
+        caption="Verify" 
+        disabled={otp.length === 0} 
+        onClick={onClick}
+        custom={{backgroundColor:"#F4CFCA", color:"#000000"}} />
     </div>
   )
 
@@ -136,11 +152,22 @@ const App = () => {
 
   return (
     <div>
-        <ButtonTimer 
-          timer={30} 
-          captionBefore="Resend OTP in " 
-          captionAfter="Resend OTP" 
-          onClick={onResend()}/>
+
+      {/* Simple usage */}
+      <ButtonTimer 
+        timer={30} 
+        captionBefore="Resend OTP in " 
+        captionAfter="Resend OTP" 
+        onClick={onResend()}/>
+
+      {/* Advanced usage */}
+      <ButtonTimer 
+        timer={30} 
+        captionBefore="Resend OTP in " 
+        captionAfter="Resend OTP" 
+        onClick={onResend()}
+        custom={{backgroundColor:"#efefef", color:"#000000"}}/>
+      
     </div>
   )
 
@@ -165,7 +192,11 @@ const App = () => {
 
   return (
     <div>
+      {/* Simple Usage */}
       <Footnote caption="Version 3.12" />
+
+      {/* Advanced Usage */}
+      <Footnote caption="Version 3.12" custom={{color: "red"}}/>
     </div>
   )
 
@@ -190,7 +221,11 @@ const App = () => {
 
   return (
     <div>
+      {/* Simple Usage */}
       <InfoBlock caption="OTP has been emailed to abc@gmail.com" />
+
+      {/* Advanced Usage */}
+      <InfoBlock caption="OTP has been emailed to abc@gmail.com"  custom={{backgroundColor:"#F4CFCA", color:"#000000", borderColor:"#000000"}}/>
     </div>
   )
 

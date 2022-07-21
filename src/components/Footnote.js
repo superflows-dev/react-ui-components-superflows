@@ -12,7 +12,15 @@ const Footnote = (props) => {
                 <div>
                     <Container className="w-100" >
                         <Row className='justify-content-center'>
-                            <Col sm={12} xs={12} md={12} xxl={12} className={`d-flex p-0 justify-content-center text-secondary`}>
+                            <Col 
+                                sm={12} 
+                                xs={12} 
+                                md={12} 
+                                xxl={12} 
+                                className={`d-flex p-0 justify-content-center`}
+                                style={{ 
+                                    color: props.custom != null ? (props.custom.color != null ? props.custom.color : 'gray') : 'gray',
+                                }}>
                                 <div>{props.caption}</div>
                             </Col>
                         </Row>

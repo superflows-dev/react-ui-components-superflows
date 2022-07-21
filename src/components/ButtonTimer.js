@@ -6,7 +6,22 @@ const ButtonTimer = (props) => {
 
     const [timer, setTimer] = useState(props.timer);
     const [disabled, setDisabled] = useState(true)
-    const [textColor, setTextColor] = useState('text-dark')
+    const [backgroundColor, setBackgroundColor] = useState('#aaa')
+    const [color, setColor] = useState('#aaa')
+
+    const resetColors = () => {
+        setBackgroundColor(props.custom != null ? (props.custom.backgroundColor != null ? props.custom.backgroundColor : 'transparent' ) : 'transparent');
+        setColor(props.custom != null ? (props.custom.color != null ? props.custom.color : 'black' ) : 'black');
+    }
+
+    const invertColors = () => {
+        setColor(props.custom != null ? (props.custom.backgroundColor != null ? props.custom.backgroundColor : 'transparent' ) : 'transparent');
+        setBackgroundColor(props.custom != null ? (props.custom.color != null ? props.custom.color : 'black' ) : 'black');
+    }
+
+    useEffect(() => {
+        resetColors();
+    }, [])
 
     useEffect(() => {
 
@@ -20,7 +35,11 @@ const ButtonTimer = (props) => {
     }, [timer])
 
     const onTouchStart = (value) => {
-        value ? setTextColor('text-light') : setTextColor('text-dark');
+        if(value) {
+            invertColors();
+        } else {
+            setTimeout(() => {resetColors();}, 300); 
+        }   
     }
 
     return (
@@ -29,7 +48,19 @@ const ButtonTimer = (props) => {
             <Row className='justify-content-end'>
                 <Col className="p-0"></Col>
                 <Col className="col-auto p-0">
-                    <Button variant="btn-link" className={`btn btn-link ml-auto align-self-end fw-bolder border-0  ${textColor}`} onTouchStart={() => {onTouchStart(true)}} onMouseDown={() => {onTouchStart(true)}} onTouchEnd={() => {onTouchStart(false)}} onMouseUp={() => {onTouchStart(false)}} disabled={disabled} onClick={() => {setTimer(props.timer); props.onClick()}}>
+                    <Button 
+                        variant="btn-link" 
+                        className={`btn btn-link ml-auto align-self-end fw-bolder border-0`} 
+                        style={{ 
+                            backgroundColor: backgroundColor,
+                            color: color,
+                        }}
+                        onTouchStart={() => {onTouchStart(true)}} 
+                        onMouseDown={() => {onTouchStart(true)}} 
+                        onTouchEnd={() => {onTouchStart(false)}} 
+                        onMouseUp={() => {onTouchStart(false)}} 
+                        disabled={disabled} 
+                        onClick={() => {setTimer(props.timer); props.onClick()}}>
                         {timer > 0 ? props.captionBefore : props.captionAfter} {timer > 0 ? timer + "s" : ""}
                     </Button>
                 </Col>
