@@ -11,5 +11,7 @@ import ButtonTimer from './components/ButtonTimer';
 import AlertSuccess from './components/AlertSuccess';
 import InfoBlock from './components/InfoBlock';
 import Footnote from './components/Footnote';
+import InputName from './components/InputName';
+import InputDob from './components/InputDob';
 
-export {AlertError, ButtonNext, InputEmail, InputOtp, VSpace, LogoMast, ButtonTimer, AlertSuccess, InfoBlock, Footnote};
+export {AlertError, ButtonNext, InputEmail, InputOtp, VSpace, LogoMast, ButtonTimer, AlertSuccess, InfoBlock, Footnote, InputName, InputDob};

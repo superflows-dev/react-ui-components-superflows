@@ -270,6 +270,74 @@ export default App
 ```
 [![Demo](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/react-ts-lipf5o?file=App.tsx)
 
+### InputName
+
+Email input, with in built validation, enter press handling and autofocus.
+
+```jsx
+
+import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { InputName } from 'react-ui-components-superflows'
+
+const App = () => {
+
+  const [name, setName] = useState('');
+
+  function onEnterName() {
+    // code after on enter pressed
+  }
+
+  return (
+    <div>
+      <InputName 
+        setValue={setName} 
+        autofocus={true} 
+        onEnterPressed={() => {onEnterName()}}/>
+    </div>
+  )
+
+}
+
+export default App
+
+```
+[![Demo](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/react-ts-lipf5o?file=App.tsx)
+
+### InputDob
+
+Email input, with in built validation, enter press handling and autofocus.
+
+```jsx
+
+import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { InputDob } from 'react-ui-components-superflows'
+
+const App = () => {
+
+  const [dob, setDob] = useState('');
+
+  function onEnterDob() {
+    // code after on enter pressed
+  }
+
+  return (
+    <div>
+      <InputDob 
+        setValue={setDob} 
+        autofocus={true} 
+        onEnterPressed={() => {onEnterDob()}}/>
+    </div>
+  )
+
+}
+
+export default App
+
+```
+[![Demo](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/react-ts-lipf5o?file=App.tsx)
+
 ### InputOTP
 
 OTP input, with in built validation, enter press handling and autofocus.
