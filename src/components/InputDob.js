@@ -65,7 +65,6 @@ const InputDob = (props) => {
     }
 
     const validate = (dd, mm, yyyy) => {
-        console.log(yyyy + "-" + mm + "-" + dd, Date.parse(yyyy + "-" + mm + "-" + dd), new Date().getTime());
         if (dd == "" || 
             mm == "" || 
             yyyy == "" || 
@@ -77,27 +76,24 @@ const InputDob = (props) => {
             parseInt(yyyy) > 3000
             )  {
 
-                console.log('here 1');
-
                 return false;
 
         } else { 
 
-            console.log('here 2');
-                if(mm == "2") {
-                    if((parseInt(mm)%4 === 0 && parseInt(dd) > 29) ||
-                        (parseInt(mm)%4 > 0 && parseInt(dd) > 28)) {
-                            return false;
-                        } else {
-                            return true;
-                        }
-                } else if (mm == "4" || mm == "6" || mm == "9" || mm == "11") {
-                    if(parseInt(dd) > 30) {
+            if(mm == "2") {
+                if((parseInt(mm)%4 === 0 && parseInt(dd) > 29) ||
+                    (parseInt(mm)%4 > 0 && parseInt(dd) > 28)) {
                         return false;
                     } else {
                         return true;
                     }
-                } 
+            } else if (mm == "4" || mm == "6" || mm == "9" || mm == "11") {
+                if(parseInt(dd) > 30) {
+                    return false;
+                } else {
+                    return true;
+                }
+            } 
 
             return true;
         }

@@ -338,6 +338,39 @@ export default App
 ```
 [![Demo](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/react-ts-lipf5o?file=App.tsx)
 
+### InputGender
+
+Gender input, with in built in switch.
+
+```jsx
+
+import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { InputGender } from 'react-ui-components-superflows'
+
+const App = () => {
+
+  const [gender, setGender] = useState(0);
+
+  function onChangeGender(value) {
+    setGender(value)
+  }
+
+  return (
+    <div>
+      <InputDob 
+        onChange={onChangeGender}
+        selectedValue={1} />
+    </div>
+  )
+
+}
+
+export default App
+
+```
+[![Demo](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/react-ts-lipf5o?file=App.tsx)
+
 ### InputOTP
 
 OTP input, with in built validation, enter press handling and autofocus.

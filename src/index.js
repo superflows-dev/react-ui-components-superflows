@@ -13,5 +13,6 @@ import InfoBlock from './components/InfoBlock';
 import Footnote from './components/Footnote';
 import InputName from './components/InputName';
 import InputDob from './components/InputDob';
+import InputGender from './components/InputGender';
 
-export {AlertError, ButtonNext, InputEmail, InputOtp, VSpace, LogoMast, ButtonTimer, AlertSuccess, InfoBlock, Footnote, InputName, InputDob};
+export {AlertError, ButtonNext, InputEmail, InputOtp, VSpace, LogoMast, ButtonTimer, AlertSuccess, InfoBlock, Footnote, InputName, InputDob, InputGender};
