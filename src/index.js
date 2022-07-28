@@ -14,5 +14,6 @@ import Footnote from './components/Footnote';
 import InputName from './components/InputName';
 import InputDob from './components/InputDob';
 import InputGender from './components/InputGender';
+import ButtonCancel from './components/ButtonCancel';
 
-export {AlertError, ButtonNext, InputEmail, InputOtp, VSpace, LogoMast, ButtonTimer, AlertSuccess, InfoBlock, Footnote, InputName, InputDob, InputGender};
+export {AlertError, ButtonNext, InputEmail, InputOtp, VSpace, LogoMast, ButtonTimer, AlertSuccess, InfoBlock, Footnote, InputName, InputDob, InputGender, ButtonCancel};

@@ -133,6 +133,49 @@ export default App
 [![Demo](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/react-ts-lipf5o?file=App.tsx)
 
 
+### ButtonCancel
+
+Button component, which cancels the existing operation
+
+```jsx
+
+import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { ButtonCancel } from 'react-ui-components-superflows'
+
+const App = () => {
+
+  function onClick() {
+    // code after clicking
+  }
+
+  return (
+    <div>
+      {/* Simple usage */}
+      <ButtonCancel
+        caption="Cancel" 
+        disabled={false} 
+        onClick={onClick} />
+
+      {/* Advanced usage */}
+      <ButtonCancel 
+        caption="Cancel" 
+        disabled={false} 
+        onClick={onClick}
+        icon="ArrowRight"
+        custom={{backgroundColor:"#F4CFCA", color:"#000000"}} />
+    </div>
+  )
+
+}
+
+export default App
+
+```
+[![Demo](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/react-ts-lipf5o?file=App.tsx)
+
+
+
 ### ButtonTimer
 
 Button component, which is initially disabled, enables after a specified time. After onClick, it again disabled and enables after the same time specified in second by duration.
