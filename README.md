@@ -120,6 +120,7 @@ const App = () => {
         caption="Verify" 
         disabled={otp.length === 0} 
         onClick={onClick}
+        icon="ArrowRight"
         custom={{backgroundColor:"#F4CFCA", color:"#000000"}} />
     </div>
   )

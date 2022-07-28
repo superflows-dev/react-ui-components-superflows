@@ -2,12 +2,15 @@ import React, { useEffect } from 'react'
 import { useState, useRef } from "react";
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
+import * as Icons from 'react-bootstrap-icons';
 
 const ButtonNext = (props) => {
 
     const [enabled, setEnabled] = useState(true)
     const [backgroundColor, setBackgroundColor] = useState('#aaa')
     const [color, setColor] = useState('#aaa')
+
+    const { [props.icon]: Icon } = Icons
 
     const resetColors = () => {
         setBackgroundColor(props.custom != null ? (props.custom.backgroundColor != null ? props.custom.backgroundColor : 'black' ) : 'black');
@@ -50,7 +53,7 @@ const ButtonNext = (props) => {
                         onMouseUp={() => {onTouchStart(false)}} 
                         disabled={props.disabled != null ? props.disabled : false} 
                         >
-                        {props.caption?props.caption:'Next'} &nbsp; <ArrowRightCircle />
+                        {props.caption?props.caption:'Next'} &nbsp; {props.icon != null ? <Icon /> : <ArrowRightCircle />}
                     </Button>
                 </Col>
             </Row>
