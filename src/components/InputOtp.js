@@ -44,7 +44,7 @@ const InputOtp = (props) => {
                     <div className='me-3'>
                         OTP
                     </div>
-                    <input ref={refInput} type="email" className='flex-grow-1 border-0 border-start ps-3' onKeyUp={onKeyUp}/>
+                    <input ref={refInput} type="password" className='flex-grow-1 border-0 border-start ps-3' onKeyUp={onKeyUp}/>
                 </Col>
             </Row>
         </Container>
