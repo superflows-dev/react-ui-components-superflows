@@ -60,7 +60,7 @@ const ButtonTimer = (props) => {
                         onTouchEnd={() => {onTouchStart(false)}} 
                         onMouseUp={() => {onTouchStart(false)}} 
                         disabled={disabled} 
-                        onClick={() => {setTimer(props.timer); props.onClick()}}>
+                        onClick={(event) => {setTimer(props.timer); props.onClick(event)}}>
                         {timer > 0 ? props.captionBefore : props.captionAfter} {timer > 0 ? timer + "s" : ""}
                     </Button>
                 </Col>
