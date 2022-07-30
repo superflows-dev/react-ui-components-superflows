@@ -91,7 +91,7 @@ export default App
 
 ### ButtonNext
 
-Button component, which navigates to the next screen after click
+Button component, which is designed for navigating to the next screen after click
 
 ```jsx
 
@@ -135,7 +135,7 @@ export default App
 
 ### ButtonCancel
 
-Button component, which cancels the existing operation
+Button component, which is designed as a button to cancel any activity
 
 ```jsx
 
@@ -163,6 +163,48 @@ const App = () => {
         disabled={false} 
         onClick={onClick}
         icon="ArrowRight"
+        custom={{backgroundColor:"#F4CFCA", color:"#000000"}} />
+    </div>
+  )
+
+}
+
+export default App
+
+```
+[![Demo](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/react-ts-lipf5o?file=App.tsx)
+
+
+### ButtonNeutral
+
+Button component, which is designed as a neutral component and can be used for any purpose
+
+```jsx
+
+import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { ButtonNeutral } from 'react-ui-components-superflows'
+
+const App = () => {
+
+  function onClick() {
+    // code after clicking
+  }
+
+  return (
+    <div>
+      {/* Simple usage */}
+      <ButtonNeutral
+        caption="Update" 
+        disabled={false} 
+        onClick={onClick} />
+
+      {/* Advanced usage */}
+      <ButtonNeutral 
+        caption="Update" 
+        disabled={false} 
+        onClick={onClick}
+        icon="Save"
         custom={{backgroundColor:"#F4CFCA", color:"#000000"}} />
     </div>
   )
