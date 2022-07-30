@@ -38,6 +38,7 @@ const ButtonNeutral = (props) => {
     return (
 
         <Button 
+            onClick={() => {if(props.onClick != null) props.onClick()}}
             className={`btn btn-primary ml-auto align-self-end fw-bolder border-0`} 
             style={{ 
                 backgroundColor: backgroundColor,
