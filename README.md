@@ -390,6 +390,40 @@ export default App
 ```
 [![Demo](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/react-ts-lipf5o?file=App.tsx)
 
+### InputSearch
+
+Search input, with in built validation, enter press handling and autofocus.
+
+```jsx
+
+import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { InputSearch } from 'react-ui-components-superflows'
+
+const App = () => {
+
+  const [searchString, setSearchString] = useState('');
+
+  function onEnterSearch() {
+    // code after on enter pressed
+  }
+
+  return (
+    <div>
+      <InputSearch 
+        setValue={setSearchString} 
+        autofocus={true} 
+        onEnterPressed={() => {onEnterSearch()}}/>
+    </div>
+  )
+
+}
+
+export default App
+
+```
+[![Demo](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/react-ts-lipf5o?file=App.tsx)
+
 ### InputDob
 
 Email input, with in built validation, enter press handling and autofocus.

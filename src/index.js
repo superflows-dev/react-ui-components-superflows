@@ -12,9 +12,10 @@ import AlertSuccess from './components/AlertSuccess';
 import InfoBlock from './components/InfoBlock';
 import Footnote from './components/Footnote';
 import InputName from './components/InputName';
+import InputSearch from './components/InputSearch';
 import InputDob from './components/InputDob';
 import InputGender from './components/InputGender';
 import ButtonCancel from './components/ButtonCancel';
 import ButtonNeutral from './components/ButtonNeutral';
 
-export {AlertError, ButtonNext, InputEmail, InputOtp, VSpace, LogoMast, ButtonTimer, AlertSuccess, InfoBlock, Footnote, InputName, InputDob, InputGender, ButtonCancel, ButtonNeutral};
+export {AlertError, ButtonNext, InputEmail, InputOtp, VSpace, LogoMast, ButtonTimer, AlertSuccess, InfoBlock, Footnote, InputName, InputDob, InputGender, InputSearch, ButtonCancel, ButtonNeutral};
